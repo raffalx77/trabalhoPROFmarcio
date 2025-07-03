@@ -1,37 +1,37 @@
 /* stylo.css */
 
-/* Global Styles */
+/* Global Styles (Aplicados a todas as páginas) */
 body {
-    font-family: 'Poppins', sans-serif; /* Modern font choice */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e limpa */
     margin: 0;
-    padding: 0;
-    background-color: #e0eafc; /* Light blue background for overall feel */
+    padding: 20px;
+    background-color: #e0eafc; /* Azul claro suave para o fundo geral */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    box-sizing: border-box;
-    color: #333;
-    line-height: 1.6;
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
 }
 
 .container {
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    border-radius: 15px; /* Bordas arredondadas para um visual suave */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
     width: 100%;
-    max-width: 1000px; /* Slightly wider max-width */
-    margin: 30px 0; /* Add margin top/bottom */
+    max-width: 1000px; /* Largura máxima para evitar que o conteúdo se estique muito */
+    margin: 30px 0; /* Margem superior e inferior para afastar das bordas da tela */
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Clear floats/contain elements */
+    overflow: hidden; /* Garante que nada transborde do container */
 }
 
-/* --- Welcome Page Specific Styles (index.html) --- */
+/* --- Estilos Específicos para a Página de Boas-Vindas (index.html) --- */
 .welcome-page header h1 {
-    font-size: 2.8em; /* Larger heading */
-    color: #007bff; /* Primary blue */
+    font-size: 2.8em;
+    color: #007bff; /* Azul primário */
     text-align: center;
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -39,25 +39,25 @@ body {
 
 .welcome-page .content-area {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center; /* Center content when it wraps */
+    flex-wrap: wrap; /* Permite que os painéis quebrem a linha em telas menores */
+    gap: 30px; /* Espaço entre os painéis */
+    justify-content: center; /* Centraliza o conteúdo quando ele quebra */
 }
 
 .welcome-page .left-panel,
 .welcome-page .right-panel {
-    background-color: #f8faff; /* Lighter background for panels */
+    background-color: #f8faff; /* Fundo mais claro para os painéis */
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    flex: 1; /* Allow panels to grow/shrink */
-    min-width: 280px; /* Minimum width for responsiveness */
+    flex: 1; /* Permite que os painéis cresçam/diminuam proporcionalmente */
+    min-width: 280px; /* Largura mínima para garantir legibilidade antes de quebrar */
 }
 
 .welcome-page .left-panel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centraliza o conteúdo (foto, texto) */
     text-align: center;
 }
 
@@ -75,14 +75,14 @@ body {
 .welcome-page .profile-picture img {
     max-width: 200px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Torna a imagem redonda */
     border: 5px solid #007bff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
 }
 
 .welcome-page .profile-picture img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem no hover */
 }
 
 .welcome-page .photo-label {
@@ -102,7 +102,7 @@ body {
 }
 
 .welcome-page .menu ul {
-    list-style: none;
+    list-style: none; /* Remove marcadores de lista */
     padding: 0;
 }
 
@@ -111,11 +111,11 @@ body {
 }
 
 .welcome-page .menu-item {
-    text-decoration: none;
+    text-decoration: none; /* Remove sublinhado dos links */
     color: #333;
-    background-color: #e0f2ff; /* Lighter blue for menu items */
+    background-color: #e0f2ff; /* Azul mais claro para os itens de menu */
     padding: 15px 20px;
-    display: block;
+    display: block; /* Ocupa a largura total do pai */
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     font-weight: bold;
@@ -125,15 +125,15 @@ body {
 .welcome-page .menu-item:hover {
     background-color: #007bff;
     color: #ffffff;
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Efeito de "subida" no hover */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .welcome-page .highlight-menu {
-    background-color: #ffda6a; /* Gold highlight for Arraiá link */
-    color: #a0522d; /* Sienna color for contrast */
+    background-color: #ffda6a; /* Cor dourada para o link do Arraiá */
+    color: #a0522d; /* Cor marrom para contraste */
     font-size: 1.1em;
-    animation: pulse 1.5s infinite alternate; /* Pulsing effect */
+    animation: pulse 1.5s infinite alternate; /* Animação de pulso */
 }
 
 .welcome-page .highlight-menu:hover {
@@ -141,37 +141,47 @@ body {
     color: #ffffff;
 }
 
+.welcome-page .highlight-menu-alt { /* Novo estilo para o link de autoapresentação */
+    background-color: #6aabff; /* Um azul mais claro para o novo link */
+    color: #ffffff;
+}
+
+.welcome-page .highlight-menu-alt:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
 .welcome-page footer {
     text-align: center;
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #eee; /* Linha divisória */
     color: #777;
     font-size: 0.9em;
 }
 
-/* --- Arraiá Page Specific Styles (arraia.html) --- */
+/* --- Estilos Específicos para a Página do Arraiá (arraia.html) --- */
 .arraia-page {
-    background-color: #fff9e6; /* Creamy yellow for festive feel */
-    border: 5px dashed #a0522d; /* Dashed border for festive look */
+    background-color: #fff9e6; /* Amarelo creme para um ar festivo */
+    border: 5px dashed #a0522d; /* Borda tracejada festiva */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .arraia-header {
     text-align: center;
     margin-bottom: 40px;
-    background-color: #ff6f61; /* Vibrant red-orange */
+    background-color: #ff6f61; /* Vermelho-alaranjado vibrante */
     padding: 20px 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .arraia-header h1 {
-    font-family: 'Comic Sans MS', cursive; /* Fun, festive font */
-    font-size: 3.5em; /* Very large */
+    font-family: 'Comic Sans MS', cursive; /* Fonte divertida e festiva */
+    font-size: 3.5em;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 2px; /* Espaçamento entre letras */
 }
 
 .arraia-header .event-slogan {
@@ -185,19 +195,19 @@ body {
 }
 
 .event-details {
-    background-color: #fffacd; /* Light yellow */
+    background-color: #fffacd; /* Amarelo claro */
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-left: 8px solid #ffaa00; /* Orange border */
+    border-left: 8px solid #ffaa00; /* Borda laranja à esquerda */
 }
 
 .event-details h2 {
-    color: #a0522d; /* Sienna */
+    color: #a0522d; /* Cor marrom */
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 2px dashed #ffaa00;
+    border-bottom: 2px dashed #ffaa00; /* Linha tracejada */
     padding-bottom: 10px;
 }
 
@@ -208,29 +218,29 @@ body {
 
 .event-details .highlight-info {
     font-weight: bold;
-    color: #d8570c; /* Darker orange */
+    color: #d8570c; /* Laranja mais escuro */
     background-color: #fff0b3;
     padding: 3px 6px;
     border-radius: 4px;
 }
 
 .event-details ul {
-    list-style: none;
+    list-style: none; /* Remove marcadores de lista */
     padding: 0;
     margin-top: 15px;
 }
 
 .event-details ul li {
-    background-color: #ffe0b3; /* Light orange for list items */
+    background-color: #ffe0b3; /* Laranja claro para itens de lista */
     margin-bottom: 8px;
     padding: 10px 15px;
     border-radius: 6px;
-    border-left: 5px solid #ff7b00; /* Vibrant orange */
+    border-left: 5px solid #ff7b00; /* Borda vibrante à esquerda */
     font-size: 1.05em;
 }
 
 .gallery-section {
-    background-color: #ffedcc; /* Even lighter orange */
+    background-color: #ffedcc; /* Laranja ainda mais claro */
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -247,7 +257,7 @@ body {
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo para fotos */
     gap: 20px;
     justify-content: center;
 }
@@ -262,14 +272,14 @@ body {
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de "subida" no hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures image covers area without distortion */
+    height: 200px; /* Altura fixa para consistência das fotos */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
     display: block;
 }
 
@@ -278,7 +288,7 @@ body {
     font-size: 1em;
     color: #555;
     font-weight: bold;
-    background-color: #ffe6b3; /* Light orange background for caption */
+    background-color: #ffe6b3; /* Fundo laranja claro para a legenda */
     margin: 0;
 }
 
@@ -291,13 +301,113 @@ body {
     font-size: 1em;
 }
 
-.arraia-footer p {
-    margin-bottom: 10px;
+/* --- Estilos Específicos para a Página de Autoapresentação (autoapresentacao.html) --- */
+.auto-apresentacao-page {
+    background-color: #f0f8ff; /* Fundo suave e acolhedor */
+    border: 3px solid #87ceeb; /* Borda azul clara */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.apresentacao-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #add8e6; /* Azul claro pastel */
+    padding: 25px 0;
+    border-radius: 10px 10px 0 0;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.apresentacao-header h1 {
+    font-size: 2.8em;
+    color: #2f80ed; /* Azul vibrante */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Fonte mais limpa para esta seção */
+}
+
+.apresentacao-header .slogan {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 10px;
+    color: #555;
+}
+
+.apresentacao-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.about-me-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem a linha */
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    width: 100%;
+}
+
+.my-photo-container {
+    flex: 1; /* Ocupa o espaço disponível */
+    min-width: 250px; /* Largura mínima para a foto */
+    text-align: center;
+}
+
+.my-photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda levemente arredondada */
+    border: 4px solid #87ceeb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.my-photo-container img:hover {
+    transform: scale(1.02);
+}
+
+.my-photo-container .photo-caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.text-content {
+    flex: 2; /* Ocupa mais espaço para o texto */
+    min-width: 300px; /* Largura mínima para o texto */
+}
+
+.text-content h2 {
+    color: #2f80ed;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #add8e6;
+    padding-bottom: 8px;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.apresentacao-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* --- Botões de Voltar (aplicado em arraia.html e autoapresentacao.html) --- */
 .back-button {
     display: inline-block;
-    background-color: #4CAF50; /* Green button */
+    background-color: #4CAF50; /* Botão verde */
     color: white;
     padding: 12px 25px;
     text-align: center;
@@ -313,45 +423,57 @@ body {
     transform: translateY(-2px);
 }
 
-/* Animations */
+/* --- Animações --- */
 @keyframes pulse {
     0% { transform: scale(1); }
     100% { transform: scale(1.03); }
 }
 
-/* Responsive Design */
+/* --- Responsividade (Media Queries) --- */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
         margin: 15px 0;
     }
     .welcome-page header h1,
-    .arraia-header h1 {
+    .arraia-header h1,
+    .apresentacao-header h1 { /* Ajuste para todos os títulos principais */
         font-size: 2em;
     }
     .welcome-page .content-area {
-        flex-direction: column;
+        flex-direction: column; /* Empilha painéis verticalmente */
     }
     .welcome-page .left-panel,
     .welcome-page .right-panel {
-        min-width: unset;
+        min-width: unset; /* Remove largura mínima */
         width: 100%;
     }
-    .arraia-header .event-slogan {
+    .arraia-header .event-slogan,
+    .apresentacao-header .slogan {
         font-size: 1.2em;
     }
     .event-details h2,
-    .gallery-section h2 {
+    .gallery-section h2,
+    .text-content h2 { /* Ajuste para todos os subtítulos */
         font-size: 1.6em;
     }
     .event-details p,
-    .event-details ul li {
+    .event-details ul li,
+    .text-content p {
         font-size: 1em;
     }
     .photo-gallery {
-        grid-template-columns: 1fr; /* Stack photos on small screens */
+        grid-template-columns: 1fr; /* Empilha fotos em telas pequenas */
     }
     .gallery-item img {
         height: 180px;
+    }
+    .about-me-section {
+        flex-direction: column; /* Empilha verticalmente na autoapresentação */
+        text-align: center;
+    }
+    .my-photo-container, .text-content {
+        min-width: unset; /* Remove largura mínima para melhor adaptação */
+        width: 100%;
     }
 }
